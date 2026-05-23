@@ -9,28 +9,28 @@ function applyTheme(theme: Theme) {
 }
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof document !== "undefined") {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-
-      if (currentTheme === "dark" || currentTheme === "light") {
-        return currentTheme;
-      }
-    }
-
-    return "light";
-  });
+  const [theme, setTheme] = useState<Theme>("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
+    const frame = window.requestAnimationFrame(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const resolvedTheme =
+        currentTheme === "dark" || currentTheme === "light" ? currentTheme : "light";
+
+      setTheme(resolvedTheme);
+      setMounted(true);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const nextTheme = theme === "light" ? "dark" : "light";
 
   return (
     <button
       type="button"
-      aria-label={`Switch to ${nextTheme} mode`}
+      aria-label={mounted ? `Switch to ${nextTheme} mode` : "Toggle theme"}
       onClick={() => {
         const updatedTheme = theme === "light" ? "dark" : "light";
         applyTheme(updatedTheme);
@@ -42,17 +42,19 @@ export function ThemeToggle() {
       <span className="relative flex h-5 w-5 items-center justify-center">
         <span
           className={`absolute h-5 w-5 rounded-full border border-current transition-all duration-300 ${
-            theme === "dark" ? "scale-100 opacity-100" : "scale-75 opacity-0"
+            mounted && theme === "dark" ? "scale-100 opacity-100" : "scale-75 opacity-0"
           }`}
         />
         <span
           className={`absolute h-4 w-4 rounded-full bg-current transition-all duration-300 ${
-            theme === "light" ? "scale-100 opacity-100" : "scale-75 opacity-0"
+            !mounted || theme === "light" ? "scale-100 opacity-100" : "scale-75 opacity-0"
           }`}
         />
         <span
           className={`absolute h-5 w-5 rounded-full border-2 border-current transition-all duration-300 ${
-            theme === "dark" ? "translate-x-1.5 -translate-y-1.5 scale-75 opacity-100" : "translate-x-0 translate-y-0 scale-0 opacity-0"
+            mounted && theme === "dark"
+              ? "translate-x-1.5 -translate-y-1.5 scale-75 opacity-100"
+              : "translate-x-0 translate-y-0 scale-0 opacity-0"
           }`}
         />
       </span>
