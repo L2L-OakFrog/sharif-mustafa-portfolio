@@ -25,25 +25,25 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --background: #07110f;
-  --foreground: #e6fff8;
-  --surface: rgba(8, 24, 21, 0.5);
-  --surface-strong: rgba(11, 33, 28, 0.68);
-  --surface-muted: rgba(10, 30, 25, 0.4);
-  --border: rgba(174, 255, 234, 0.14);
-  --border-soft: rgba(174, 255, 234, 0.08);
-  --accent: #2fe0b6;
-  --accent-soft: rgba(47, 224, 182, 0.14);
-  --accent-strong: #95ffe4;
-  --shadow: 0 30px 70px rgba(0, 0, 0, 0.38);
-  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.28);
-  --grid: rgba(77, 150, 132, 0.12);
-  --glow-a: rgba(35, 124, 102, 0.28);
-  --glow-b: rgba(12, 49, 41, 0.92);
-  --glow-c: rgba(7, 17, 15, 0.98);
-  --liquid-edge: rgba(143, 255, 226, 0.18);
-  --liquid-shine: rgba(214, 255, 244, 0.12);
-  --liquid-tint: rgba(47, 224, 182, 0.12);
+  --background: #040807;
+  --foreground: #e7fff8;
+  --surface: rgba(7, 20, 18, 0.54);
+  --surface-strong: rgba(9, 28, 24, 0.72);
+  --surface-muted: rgba(9, 26, 23, 0.46);
+  --border: rgba(132, 255, 221, 0.16);
+  --border-soft: rgba(132, 255, 221, 0.08);
+  --accent: #24d9af;
+  --accent-soft: rgba(36, 217, 175, 0.16);
+  --accent-strong: #9fffe6;
+  --shadow: 0 32px 76px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.34);
+  --grid: rgba(66, 131, 113, 0.14);
+  --glow-a: rgba(24, 151, 121, 0.24);
+  --glow-b: rgba(8, 42, 35, 0.96);
+  --glow-c: rgba(4, 8, 7, 1);
+  --liquid-edge: rgba(159, 255, 230, 0.2);
+  --liquid-shine: rgba(223, 255, 247, 0.11);
+  --liquid-tint: rgba(36, 217, 175, 0.14);
 }
 
 html {
@@ -70,10 +70,10 @@ body {
 
 html[data-theme="dark"] body {
   background:
-    radial-gradient(circle at 10% 8%, rgba(23, 121, 98, 0.24), transparent 26%),
-    radial-gradient(circle at 88% 10%, rgba(18, 76, 64, 0.34), transparent 23%),
-    radial-gradient(circle at 30% 90%, rgba(26, 97, 80, 0.3), transparent 24%),
-    linear-gradient(180deg, rgba(8, 19, 17, 0.96) 0%, rgba(7, 17, 15, 0.98) 34%, #07110f 100%),
+    radial-gradient(circle at 10% 8%, rgba(23, 152, 122, 0.22), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(13, 86, 70, 0.32), transparent 22%),
+    radial-gradient(circle at 30% 90%, rgba(18, 116, 94, 0.24), transparent 24%),
+    linear-gradient(180deg, rgba(8, 13, 12, 0.98) 0%, rgba(4, 8, 7, 1) 40%, #040807 100%),
     var(--background);
 }
 
@@ -92,10 +92,10 @@ body::before {
 
 html[data-theme="dark"] body::before {
   background:
-    linear-gradient(135deg, rgba(170, 255, 235, 0.08), transparent 34%),
-    linear-gradient(220deg, rgba(31, 122, 100, 0.12), transparent 40%),
-    radial-gradient(circle at 20% 20%, rgba(184, 255, 238, 0.08), transparent 22%),
-    radial-gradient(circle at 80% 30%, rgba(40, 160, 130, 0.08), transparent 20%);
+    linear-gradient(135deg, rgba(192, 255, 240, 0.06), transparent 34%),
+    linear-gradient(220deg, rgba(29, 140, 113, 0.1), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(195, 255, 241, 0.06), transparent 22%),
+    radial-gradient(circle at 80% 30%, rgba(40, 160, 130, 0.06), transparent 20%);
 }
 
 body::after {
