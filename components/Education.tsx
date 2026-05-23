@@ -19,7 +19,7 @@ export function Education({ education }: EducationProps) {
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((item, index) => (
             <ScrollReveal key={item.degree} delay={index * 100}>
-              <article className="section-card section-glass-b rounded-[1.75rem] p-6 sm:p-8">
+              <article className="section-card section-glass-b rounded-[var(--radius-card)] p-6 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 Degree
               </p>

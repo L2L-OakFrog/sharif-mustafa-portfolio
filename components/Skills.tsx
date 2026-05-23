@@ -19,7 +19,7 @@ export function Skills({ groups }: SkillsProps) {
         <div className="grid gap-5 lg:grid-cols-2">
           {groups.map((group, index) => (
             <ScrollReveal key={group.category} delay={index * 70}>
-              <article className="section-card section-glass-b rounded-[1.75rem] p-5 sm:p-7">
+              <article className="section-card section-glass-b rounded-[var(--radius-card)] p-5 sm:p-7">
                 <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
                   <h3 className="section-title text-[1.85rem] font-bold leading-tight sm:text-2xl">{group.category}</h3>
                   <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
@@ -30,7 +30,7 @@ export function Skills({ groups }: SkillsProps) {
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-[var(--border)] bg-[var(--surface-muted)] px-3.5 py-2 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_82%,transparent)] sm:px-4"
+                    className="liquid-pill rounded-full px-3.5 py-2 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_82%,transparent)] sm:px-4"
                     >
                       {skill}
                     </span>
