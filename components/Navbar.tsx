@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { NavItem } from "@/data/portfolio";
+import { ThemeToggle } from "./ThemeToggle";
 
 type NavbarProps = {
   items: NavItem[];
@@ -36,7 +37,8 @@ export function Navbar({ items }: NavbarProps) {
             ))}
           </nav>
 
-          <div className="hidden xl:block">
+          <div className="hidden items-center gap-3 xl:flex">
+            <ThemeToggle />
             <a
               href="#contact"
               className="liquid-pill rounded-full px-4 py-2 text-sm font-semibold text-[var(--foreground)] transition-transform duration-200 hover:-translate-y-0.5"
@@ -45,31 +47,34 @@ export function Navbar({ items }: NavbarProps) {
             </a>
           </div>
 
-          <button
-            type="button"
-            aria-expanded={isOpen}
-            aria-label="Toggle navigation menu"
-            onClick={() => setIsOpen((value) => !value)}
-            className="liquid-pill flex h-12 w-12 items-center justify-center rounded-2xl xl:hidden"
-          >
-            <span className="relative h-4 w-5">
-              <span
-                className={`absolute left-0 top-0 h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-all duration-300 ${
-                  isOpen ? "top-[7px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-[7px] h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-opacity duration-300 ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-[14px] h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-all duration-300 ${
-                  isOpen ? "top-[7px] -rotate-45" : ""
-                }`}
-              />
-            </span>
-          </button>
+          <div className="flex items-center gap-2 xl:hidden">
+            <ThemeToggle />
+            <button
+              type="button"
+              aria-expanded={isOpen}
+              aria-label="Toggle navigation menu"
+              onClick={() => setIsOpen((value) => !value)}
+              className="liquid-pill flex h-12 w-12 items-center justify-center rounded-2xl"
+            >
+              <span className="relative flex h-5 w-5 items-center justify-center">
+                <span
+                  className={`absolute h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-all duration-300 ${
+                    isOpen ? "rotate-45" : "-translate-y-[6px]"
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-all duration-300 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 rounded-full bg-[var(--foreground)] transition-all duration-300 ${
+                    isOpen ? "-rotate-45" : "translate-y-[6px]"
+                  }`}
+                />
+              </span>
+            </button>
+          </div>
         </div>
 
         <div
@@ -79,6 +84,12 @@ export function Navbar({ items }: NavbarProps) {
         >
           <div className="liquid-panel max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[1.8rem] p-4 shadow-[var(--shadow)]">
             <nav className="grid gap-2.5">
+              <div className="flex items-center justify-between rounded-2xl px-1 pb-2">
+                <span className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_68%,transparent)]">
+                  Navigation
+                </span>
+                <ThemeToggle />
+              </div>
               {items.map((item) => (
                 <a
                   key={item.href}
