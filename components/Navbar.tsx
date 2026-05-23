@@ -12,7 +12,7 @@ export function Navbar({ items }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/12 backdrop-blur-3xl">
+    <header className="sticky top-0 z-50 border-b border-[var(--glass-border)] bg-[color:var(--glass-fill-base)] backdrop-blur-3xl">
       <div className="section-shell relative py-4">
         <div className="flex items-center justify-between gap-3">
           <a href="#top" className="flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
