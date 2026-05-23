@@ -229,6 +229,10 @@ html[data-theme="dark"] .liquid-panel {
   border-radius: 999px;
 }
 
+header .anchor-link {
+  color: color-mix(in srgb, var(--foreground) 88%, transparent);
+}
+
 .liquid-pill-small-radius {
   border: 1px solid var(--glass-border);
   background: linear-gradient(180deg, var(--glass-fill-top), var(--glass-fill-bottom));

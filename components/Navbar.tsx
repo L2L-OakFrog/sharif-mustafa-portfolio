@@ -12,7 +12,7 @@ export function Navbar({ items }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--glass-border)] bg-[color:var(--glass-fill-base)] backdrop-blur-3xl">
+    <header className="sticky top-0 z-50 border-b border-[var(--glass-border)] bg-[color:color-mix(in_srgb,var(--glass-fill-base)_82%,transparent)] backdrop-blur-[28px]">
       <div className="section-shell relative py-4">
         <div className="flex items-center justify-between gap-3">
           <a href="#top" className="flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
@@ -78,24 +78,30 @@ export function Navbar({ items }: NavbarProps) {
         </div>
 
         <div
-          className={`absolute left-5 right-5 top-full z-50 pt-3 transition-all duration-300 sm:left-6 sm:right-6 xl:hidden ${
-            isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
+          className={`fixed inset-0 top-[73px] z-40 transition-all duration-300 xl:hidden ${
+            isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
         >
-          <div className="section-glass-c max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[1.8rem] p-4 shadow-[var(--shadow)]">
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--background)_42%,transparent)] backdrop-blur-md"
+          />
+          <div className="section-shell relative pt-3">
+          <div className="liquid-panel max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[var(--radius-card)] p-4 shadow-[var(--shadow)]">
             <nav className="grid gap-2.5">
-              <div className="flex items-center justify-between rounded-2xl px-1 pb-2">
+              <div className="flex items-center justify-between rounded-[var(--radius-panel)] px-1 pb-2">
                 <span className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_68%,transparent)]">
                   Navigation
                 </span>
-                {/* <ThemeToggle /> */}
               </div>
               {items.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="liquid-pill rounded-2xl px-4 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_76%,transparent)]"
+                  className="liquid-pill rounded-[var(--radius-panel)] px-4 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_86%,transparent)]"
                 >
                   {item.label}
                 </a>
@@ -103,11 +109,12 @@ export function Navbar({ items }: NavbarProps) {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="mt-2 rounded-2xl bg-[var(--accent)] px-4 py-3 text-center text-sm font-bold text-white shadow-[var(--shadow-soft)]"
+                className="mt-2 rounded-[var(--radius-panel)] bg-[var(--accent)] px-4 py-3 text-center text-sm font-bold text-white shadow-[var(--shadow-soft)]"
               >
                 Let&apos;s Connect
               </a>
             </nav>
+          </div>
           </div>
         </div>
       </div>

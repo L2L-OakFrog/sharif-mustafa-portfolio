@@ -3,6 +3,7 @@ import { Contact } from "@/components/Contact";
 import { Education } from "@/components/Education";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { Expertise } from "@/components/Expertise";
+import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Skills } from "@/components/Skills";
@@ -21,6 +22,7 @@ export default function Home() {
       <Education education={portfolioData.education} />
       <Certifications certifications={portfolioData.certifications} />
       <Contact contact={portfolioData.contact} />
+      <Footer />
     </main>
   );
 }

@@ -35,7 +35,7 @@ export function Hero({ hero }: HeroProps) {
             </a>
             <a
               href={hero.secondaryCta.href}
-              className="liquid-pill inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold text-[var(--foreground)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="liquid-stage inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold text-[var(--foreground)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               {hero.secondaryCta.label}
             </a>
