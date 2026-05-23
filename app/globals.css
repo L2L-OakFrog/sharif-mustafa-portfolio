@@ -30,20 +30,20 @@ html[data-theme="dark"] {
   --surface: rgba(7, 20, 14, 0.34);
   --surface-strong: rgba(9, 28, 19, 0.5);
   --surface-muted: rgba(9, 26, 18, 0.28);
-  --border: rgba(155, 255, 180, 0.14);
-  --border-soft: rgba(155, 255, 180, 0.08);
-  --accent: #52e07c;
-  --accent-soft: rgba(82, 224, 124, 0.16);
-  --accent-strong: #c2ffd3;
+  --border: rgba(155, 255, 180, 0.1);
+  --border-soft: rgba(155, 255, 180, 0.05);
+  --accent: #63dc7f;
+  --accent-soft: rgba(99, 220, 127, 0.12);
+  --accent-strong: #d1ffda;
   --shadow: 0 32px 76px rgba(0, 0, 0, 0.5);
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.34);
   --grid: rgba(83, 150, 93, 0.14);
   --glow-a: rgba(63, 150, 79, 0.2);
   --glow-b: rgba(8, 42, 22, 0.96);
   --glow-c: rgba(4, 8, 7, 1);
-  --liquid-edge: rgba(194, 255, 211, 0.16);
-  --liquid-shine: rgba(240, 255, 242, 0.08);
-  --liquid-tint: rgba(82, 224, 124, 0.12);
+  --liquid-edge: rgba(194, 255, 211, 0.12);
+  --liquid-shine: rgba(240, 255, 242, 0.06);
+  --liquid-tint: rgba(99, 220, 127, 0.1);
 }
 
 html {
@@ -141,6 +141,13 @@ section {
   overflow: hidden;
 }
 
+html[data-theme="dark"] .section-card {
+  box-shadow:
+    inset 0 1px 0 rgba(235, 255, 240, 0.14),
+    inset 0 -1px 0 rgba(235, 255, 240, 0.03),
+    var(--shadow);
+}
+
 .section-card::before {
   content: "";
   position: absolute;
@@ -179,6 +186,16 @@ section {
   backdrop-filter: blur(28px) saturate(190%);
 }
 
+html[data-theme="dark"] .liquid-panel {
+  background:
+    linear-gradient(180deg, rgba(14, 31, 22, 0.3), rgba(9, 23, 17, 0.16)),
+    rgba(5, 14, 10, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(235, 255, 240, 0.12),
+    inset 0 -1px 0 rgba(235, 255, 240, 0.02),
+    var(--shadow-soft);
+}
+
 .liquid-panel::before {
   content: "";
   position: absolute;
@@ -200,6 +217,14 @@ section {
   backdrop-filter: blur(24px) saturate(180%);
 }
 
+html[data-theme="dark"] .liquid-pill {
+  border-color: rgba(194, 255, 211, 0.12);
+  background: linear-gradient(180deg, rgba(16, 35, 25, 0.34), rgba(9, 23, 17, 0.2));
+  box-shadow:
+    inset 0 1px 0 rgba(235, 255, 240, 0.12),
+    var(--shadow-soft);
+}
+
 .liquid-stage {
   position: relative;
   overflow: hidden;
@@ -213,6 +238,16 @@ section {
     0 24px 60px rgba(94, 125, 179, 0.12);
   -webkit-backdrop-filter: blur(28px) saturate(180%);
   backdrop-filter: blur(28px) saturate(180%);
+}
+
+html[data-theme="dark"] .liquid-stage {
+  border-color: rgba(194, 255, 211, 0.1);
+  background:
+    linear-gradient(180deg, rgba(13, 28, 21, 0.28), rgba(8, 19, 14, 0.16)),
+    rgba(5, 14, 10, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(235, 255, 240, 0.12),
+    0 24px 60px rgba(0, 0, 0, 0.26);
 }
 
 .liquid-stage::before {
@@ -257,6 +292,16 @@ section {
     0 18px 36px rgba(93, 120, 160, 0.1);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   backdrop-filter: blur(24px) saturate(180%);
+}
+
+html[data-theme="dark"] .contact-card {
+  border-color: rgba(194, 255, 211, 0.12);
+  background:
+    linear-gradient(180deg, rgba(14, 31, 22, 0.32), rgba(9, 22, 16, 0.18)),
+    rgba(5, 14, 10, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(235, 255, 240, 0.12),
+    0 18px 36px rgba(0, 0, 0, 0.22);
 }
 
 .contact-card::before {

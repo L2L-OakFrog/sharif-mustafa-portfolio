@@ -17,9 +17,6 @@ export function Certifications({ certifications }: CertificationsProps) {
         />
 
         <div className="liquid-stage px-5 py-8 sm:px-7 sm:py-10 lg:px-10">
-          <div className="liquid-column left-[6%] h-44 sm:h-56" />
-          <div className="liquid-column right-[8%] hidden h-60 md:block" />
-
           <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {certifications.map((item, index) => (
               <ScrollReveal key={item.name} delay={index * 90} className="h-full">
