@@ -21,7 +21,7 @@ export function ExperienceTimeline({ experience }: ExperienceTimelineProps) {
           {experience.map((item, index) => (
             <ScrollReveal key={`${item.company}-${item.role}`} className="relative" delay={index * 120}>
               <article className="relative">
-              <div className="section-card section-glass-c rounded-[var(--radius-card)] p-6 sm:p-8">
+              <div className="section-card liquid-stage rounded-[var(--radius-card)] p-6 sm:p-8">
                 <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                   <div className="md:relative">
                     <span className="absolute -left-[3.45rem] top-3 hidden h-4 w-4 rounded-full border-4 border-[var(--background)] bg-[var(--accent)] md:block" />
@@ -43,7 +43,7 @@ export function ExperienceTimeline({ experience }: ExperienceTimelineProps) {
                   {item.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="liquid-pill rounded-[var(--radius-panel)] px-4 py-4 text-sm leading-7 text-[color:color-mix(in_srgb,var(--foreground)_80%,transparent)]"
+                      className="liquid-pill-small-radius rounded-[var(--radius-panel)] px-4 py-4 text-sm leading-7 text-[color:color-mix(in_srgb,var(--foreground)_80%,transparent)]"
                     >
                       {bullet}
                     </li>

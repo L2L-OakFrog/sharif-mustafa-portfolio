@@ -19,7 +19,7 @@ export function Summary({ items }: SummaryProps) {
         <div className="grid gap-5 md:grid-cols-2">
           {items.map((item, index) => (
             <ScrollReveal key={item.title} delay={index * 90}>
-              <article className="section-card section-glass-a rounded-[1.75rem] p-6 sm:p-7">
+              <article className="liquid-stage section-card section-glass-a rounded-[1.75rem] p-6 sm:p-7">
               <h3 className="section-title text-2xl font-bold">{item.title}</h3>
               <p className="mt-4 leading-8 text-[color:color-mix(in_srgb,var(--foreground)_78%,transparent)]">
                 {item.description}

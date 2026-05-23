@@ -13,13 +13,14 @@ export function Education({ education }: EducationProps) {
         <SectionIntro
           eyebrow="Education"
           title="Academic foundation"
-          description="Sharif Mustafa&apos;s academic background complements a QA career built on communication, stakeholder alignment, and disciplined delivery within structured industries."
+          description="My academic background complements a QA career built on communication, stakeholder alignment, and disciplined delivery within structured industries."
         />
 
+<div className="liquid-stage px-5 py-8 sm:px-7 sm:py-10 lg:px-10">
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((item, index) => (
             <ScrollReveal key={item.degree} delay={index * 100}>
-              <article className="section-card section-glass-b rounded-[var(--radius-card)] p-6 sm:p-8">
+              <article className="liquid-stage section-card section-glass-b rounded-[var(--radius-card)] p-6 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 Degree
               </p>
@@ -30,7 +31,7 @@ export function Education({ education }: EducationProps) {
               </article>
             </ScrollReveal>
           ))}
-        </div>
+        </div></div>
       </div>
     </section>
   );

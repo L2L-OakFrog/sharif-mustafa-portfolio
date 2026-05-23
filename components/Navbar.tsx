@@ -16,7 +16,7 @@ export function Navbar({ items }: NavbarProps) {
       <div className="section-shell relative py-4">
         <div className="flex items-center justify-between gap-3">
           <a href="#top" className="flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
-            <span className="liquid-panel flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl font-[var(--font-heading)] text-sm font-extrabold tracking-[0.22em] text-[var(--accent)]">
+            <span className="liquid-stage flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl font-[var(--font-heading)] text-sm font-extrabold tracking-[0.22em] text-[var(--accent)]">
               SM
             </span>
             <span className="min-w-0">
@@ -82,13 +82,13 @@ export function Navbar({ items }: NavbarProps) {
             isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
           }`}
         >
-          <div className="liquid-panel max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[1.8rem] p-4 shadow-[var(--shadow)]">
+          <div className="section-glass-c max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[1.8rem] p-4 shadow-[var(--shadow)]">
             <nav className="grid gap-2.5">
               <div className="flex items-center justify-between rounded-2xl px-1 pb-2">
                 <span className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_68%,transparent)]">
                   Navigation
                 </span>
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
               </div>
               {items.map((item) => (
                 <a

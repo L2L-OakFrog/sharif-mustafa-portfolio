@@ -43,7 +43,7 @@ export function Hero({ hero }: HeroProps) {
         </ScrollReveal>
 
         <ScrollReveal delay={120}>
-          <div className="liquid-panel p-6 sm:p-8">
+          <div className="liquid-stage p-6 sm:p-8">
           <div className="mb-6 flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
