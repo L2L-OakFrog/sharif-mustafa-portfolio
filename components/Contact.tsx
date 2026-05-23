@@ -11,7 +11,7 @@ export function Contact({ contact }: ContactProps) {
     <section id="contact" className="py-16 sm:py-20">
       <div className="section-shell">
         <ScrollReveal>
-          <div className="section-card section-glass-a rounded-[2rem] p-6 sm:p-8 lg:p-10">
+          <div className="section-card section-glass-a rounded-[var(--radius-shell)] p-6 sm:p-8 lg:p-10">
           <SectionIntro
             eyebrow="Contact"
             title="Let&apos;s connect"
@@ -21,10 +21,10 @@ export function Contact({ contact }: ContactProps) {
           <div className="grid gap-5 md:grid-cols-3">
             <a
               href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
-              className="contact-card rounded-[1.6rem] px-5 py-5 transition-transform duration-200 hover:-translate-y-1"
+              className="contact-card px-5 py-5 transition-transform duration-200 hover:-translate-y-1"
             >
               <div className="relative flex items-start gap-4">
-                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-[var(--accent)]">
+                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-[var(--radius-panel)] text-lg font-bold text-[var(--accent)]">
                   P
                 </div>
                 <div>
@@ -39,10 +39,10 @@ export function Contact({ contact }: ContactProps) {
 
             <a
               href={`mailto:${contact.email}`}
-              className="contact-card rounded-[1.6rem] px-5 py-5 transition-transform duration-200 hover:-translate-y-1"
+              className="contact-card px-5 py-5 transition-transform duration-200 hover:-translate-y-1"
             >
               <div className="relative flex items-start gap-4">
-                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-[var(--accent)]">
+                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-[var(--radius-panel)] text-lg font-bold text-[var(--accent)]">
                   E
                 </div>
                 <div>
@@ -55,9 +55,9 @@ export function Contact({ contact }: ContactProps) {
               </div>
             </a>
 
-            <div className="contact-card rounded-[1.6rem] px-5 py-5">
+            <div className="contact-card px-5 py-5">
               <div className="relative flex items-start gap-4">
-                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-[var(--accent)]">
+                <div className="liquid-pill flex h-12 w-12 items-center justify-center rounded-[var(--radius-panel)] text-lg font-bold text-[var(--accent)]">
                   A
                 </div>
                 <div>

@@ -2,6 +2,9 @@
 
 :root {
   color-scheme: light;
+  --radius-card: 1.75rem;
+  --radius-panel: 1.35rem;
+  --radius-shell: 2.2rem;
   --background: #edf1f6;
   --foreground: #12233d;
   --surface: rgba(255, 255, 255, 0.34);
@@ -195,7 +198,7 @@ html[data-theme="dark"] .section-card {
     var(--glass-shadow);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
   backdrop-filter: blur(28px) saturate(190%);
-  border-radius: 2rem;
+  border-radius: var(--radius-card);
 }
 
 html[data-theme="dark"] .liquid-panel {
@@ -236,7 +239,7 @@ html[data-theme="dark"] .liquid-pill {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--glass-border);
-  border-radius: 2.5rem;
+  border-radius: var(--radius-shell);
   background:
     linear-gradient(180deg, var(--glass-fill-top), var(--glass-fill-bottom)),
     var(--glass-fill-base);
@@ -294,7 +297,7 @@ html[data-theme="dark"] .liquid-stage {
     var(--glass-shadow);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   backdrop-filter: blur(24px) saturate(180%);
-  border-radius: 1.6rem;
+  border-radius: var(--radius-card);
 }
 
 html[data-theme="dark"] .contact-card {

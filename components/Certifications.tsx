@@ -20,7 +20,7 @@ export function Certifications({ certifications }: CertificationsProps) {
           <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {certifications.map((item, index) => (
               <ScrollReveal key={item.name} delay={index * 90} className="h-full">
-                <article className="liquid-panel flex h-full min-h-[18rem] flex-col rounded-[2rem] p-5 sm:p-6">
+                <article className="liquid-panel flex h-full min-h-[18rem] flex-col p-5 sm:p-6">
                   <span className="liquid-pill w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
                     {item.status}
                   </span>

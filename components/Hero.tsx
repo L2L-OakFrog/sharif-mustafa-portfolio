@@ -43,7 +43,7 @@ export function Hero({ hero }: HeroProps) {
         </ScrollReveal>
 
         <ScrollReveal delay={120}>
-          <div className="liquid-panel rounded-[2rem] p-6 sm:p-8">
+          <div className="liquid-panel p-6 sm:p-8">
           <div className="mb-6 flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
@@ -53,7 +53,7 @@ export function Hero({ hero }: HeroProps) {
                 Quality engineered for regulated systems
               </h2>
             </div>
-            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] px-3 py-2 text-right">
+            <div className="rounded-[var(--radius-panel)] border border-[var(--glass-border)] bg-[var(--surface-muted)] px-3 py-2 text-right">
               <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent)]">Focus</p>
               <p className="text-sm font-semibold">Federal, Banking, Healthcare</p>
             </div>
@@ -63,7 +63,7 @@ export function Hero({ hero }: HeroProps) {
             {hero.highlights.map((highlight) => (
               <li
                 key={highlight}
-                className="liquid-pill rounded-2xl px-4 py-4 text-sm font-semibold leading-7 text-[color:color-mix(in_srgb,var(--foreground)_84%,transparent)]"
+                className="liquid-pill rounded-[var(--radius-panel)] px-4 py-4 text-sm font-semibold leading-7 text-[color:color-mix(in_srgb,var(--foreground)_84%,transparent)]"
               >
                 {highlight}
               </li>
